@@ -2,14 +2,14 @@ Jenkins Docker Image
 ====================
 
 This repository contains Dockerfiles for a Jenkins Docker image intended for 
-use with [OpenShift v3](https://github.com/openshift/origin)
+use with [Digital Garage](https://github.com/thedigitalgarage)
 
 For an example of how to use it, [see this sample.](https://github.com/openshift/origin/blob/master/examples/jenkins/README.md)
 
 The image is pushed to DockerHub as openshift/jenkins-1-centos7.
 
-For more information about using these images with OpenShift, please see the
-official [OpenShift Documentation](https://docs.openshift.org/latest/using_images/other_images/jenkins.html).
+For more information about using these images with Digital Garage, please see the
+official [Digital Garage Documentation](http://docs.thedigitalgarage.io/using_images/other_images/jenkins.html).
 
 Versions
 ---------------------------------
@@ -34,7 +34,7 @@ Choose either the CentOS7 or RHEL7 based image:
     subscribed RHEL machine.
 
     ```
-    $ git clone https://github.com/openshift/jenkins.git
+    $ git clone https://github.com/thedigitalgarage/jenkins.git
     $ cd jenkins
     $ make build TARGET=rhel7 VERSION=1
     ```
@@ -50,7 +50,7 @@ Choose either the CentOS7 or RHEL7 based image:
 	To build a Jenkins image from scratch run:
 
 	```
-	$ git clone https://github.com/openshift/jenkins.git
+	$ git clone https://github.com/thedigitalgarage/jenkins.git
 	$ cd jenkins
 	$ make build VERSION=1
 	```
@@ -91,7 +91,7 @@ Plugins
 
 #### Installing using layering
 
-In order to install additional Jenkins plugins, the OpenShift Jenkins image provides a way
+In order to install additional Jenkins plugins, the Digital Garage Jenkins image provides a way
 how to add those by layering on top of this image. The derived image, will provide the same functionality
 as described in this documentation, in addition it will also include all plugins you list in the `plugins.txt` file.
 
@@ -119,12 +119,12 @@ After this, just run `docker build -t my_jenkins_image -f Dockerfile`.
 
 #### Installing using S2I build
 
-The [s2i](https://github.com/openshift/source-to-image) tool allows you to do additional modifications of this Jenkins image.
+The [s2i](http://docs.thedigitalgarage.io/architecture/core_concepts/builds_and_image_streams.html#source-build) tool allows you to do additional modifications of this Jenkins image.
 For example, you can use S2I to copy custom Jenkins Jobs definitions, additional
 plugins or replace the default `config.xml` file with your own configuration.
 
 To do that, you can either use the standalone `s2i` tool, that will produce the
-customized Docker image or you can use OpenShift Source build strategy.
+customized Docker image or you can use Digital Garage Source build strategy.
 
 In order to include your modifications in Jenkins image, you need to have a Git
 repository with following directory structure:
