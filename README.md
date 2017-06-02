@@ -187,7 +187,7 @@ Jenkins admin user
 
 Authenticating into a Jenkins server running within the OpenShift Jenkins image is controlled by the [OpenShift Login plugin](https://github.com/openshift/jenkins-openshift-login-plugin), taking into account:
 
-* Whether or not the container is running in an OpenShift Pod
+* Whether or not the container is running in Digital Garage Pod
 * How the [environment variables](https://github.com/openshift/jenkins#environment-variables) recognized by the image are set
 
 See the [OpenShift Login plugin documentation](https://github.com/openshift/jenkins-openshift-login-plugin) for details on how it manages authentication.
