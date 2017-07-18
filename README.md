@@ -76,10 +76,10 @@ Plugins
 
 #### Installing using layering
 
-In order to install additional Jenkins plugins, the Digital Garage Jenkins image provides a way to add those by layering on top of this image. The derived image, will provide the same functionality
-as described in this documentation, in addition it will also include all plugins you list in the `plugins.txt` file.
+The Digital Garage Jenkins image provides a way to install additional Jenkins plugins by layering on top of this image. The derived image will provide the same functionality
+as described in this documentation. In addition it will also include all plugins you list in the `plugins.txt` file.
 
-To create derived image, you have to write following `Dockerfile`:
+To create derived image, you have to write the following `Dockerfile`:
 
 ```
 FROM openshift/jenkins-1-centos7
